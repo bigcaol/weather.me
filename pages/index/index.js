@@ -93,5 +93,13 @@ Page({
     wx.navigateTo({
       url: '/pages/list/list',
     })
+  },
+  //获取位置信息
+  onTapLocation(){
+    wx.getLocation({
+      success: res => {
+        console.log(res.latitude,res.longitude)
+      }
+    })
   }
 })
